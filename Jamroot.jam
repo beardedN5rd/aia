@@ -1,0 +1,17 @@
+using clang ;
+using testing ;
+
+lib boost_unit_test_framework ;
+
+project AIA
+	:
+		requirements
+		<variant>release
+		<cxxflags>-std=c++17
+		<include>include
+	;
+
+unit-test Test :
+		[ glob tests/TrueIntervalTest.cpp ]
+		boost_unit_test_framework
+	;
