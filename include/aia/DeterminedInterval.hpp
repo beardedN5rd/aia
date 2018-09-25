@@ -19,13 +19,10 @@ Intervals are always closed intervals here.
 template <typename PointInTimeType> class DeterminedInterval
 {
   public:
-    /*
-    In a true interval the boundaries have to be strictly monotonous increasing.
-    */
     static void is_true_interval(const PointInTimeType & lwb, const PointInTimeType & upb)
     {
       if ( lwb >= upb )
-        throw std::invalid_argument( "received negative value" );
+        throw std::invalid_argument( "Boundaries are not strictly monotonous increasing." );
     }
 
     /*
