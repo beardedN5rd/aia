@@ -1,9 +1,12 @@
 # aia
-c++ implementation of 
+C++ implementation of
 [Allen's interval algebra](https://en.wikipedia.org/wiki/Allen's_interval_algebra)
 
 ## Usage
 It is header only library.
+
+## Dependencies
+It requires C++11 and only uses the C++ standard library. For testing boost build and boost test are required.
 
 ## Test
 
