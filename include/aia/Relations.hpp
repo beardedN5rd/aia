@@ -8,7 +8,6 @@ Copyright (c) 2018-2018: Hagen Pache
 #pragma once
 #include <iostream>
 #include <string>
-#include <iostream>
 
 namespace aia {
 
@@ -42,7 +41,7 @@ constexpr Relations f   = Relations::finishes;
 constexpr Relations fi  = Relations::finished_by;
 constexpr Relations e   = Relations::equals;
 
-std::ostream& operator<<(std::ostream& os, const Relations& relation)  
+std::ostream& operator<<(std::ostream& os, const Relations& relation)
 {
     const static std::unordered_map<Relations, std::string> name_map
     ( { {Relations::precedes, "precedes"}
@@ -60,7 +59,7 @@ std::ostream& operator<<(std::ostream& os, const Relations& relation)
       , {Relations::equals, "equals"}
       });
 
-    os << name_map.at(relation);  
-    return os;  
+    os << name_map.at(relation);
+    return os;
 }
 }

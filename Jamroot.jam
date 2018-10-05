@@ -11,7 +11,10 @@ project AIA
 		<include>include
 	;
 
-unit-test Test :
-		[ glob tests/TrueIntervalTest.cpp ]
+unit-test Test
+	:
+		[ glob tests/DeterminedTest.cpp ]
 		boost_unit_test_framework
+	:
+		<include>tests
 	;

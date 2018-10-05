@@ -5,43 +5,16 @@ Copyright (c) 2018-2018: Hagen Pache
       (See accompanying file LICENCE.txt or copy at
            http://www.boost.org/LICENSE_1_0.txt)
 +-----------------------------------------------------------------------------*/
+#pragma once
 #include <cstdint>
 
-#define BOOST_TEST_MODULE TrueIntervalTest
-#define BOOST_TEST_DYN_LINK
-#include <boost/test/unit_test.hpp>
+#include "TrueIntervalTestHelper.hpp"
 
-#include <aia/FunctionsMap.hpp>
-
-using namespace aia; 
-
-template <typename T>
-class TestHelper : public FunctionsMap<T>
-{     
-     public:
-     void test_exactly_relation(    const Relations& relation_in,
-                                    const DeterminedInterval<T>& lhs, 
-                                    const DeterminedInterval<T>& rhs)
-     {
-        for( auto const& [rel, fun] : this->_function_map )
-        {
-            if (relation_in == rel)
-                BOOST_TEST(fun(lhs, rhs) == true);
-            else
-                BOOST_TEST( fun(lhs, rhs) == false,
-                            "expected " << relation_in <<
-                            " but also " << rel <<
-                            " with (lhs " << lhs << ", rhs " << rhs <<") got true");
-        }
-
-     }
-};
-
-
-BOOST_AUTO_TEST_SUITE( BOT )
+BOOST_AUTO_TEST_SUITE( TrueIntervalTest )
 
 using TimeType = std::uint_fast32_t;
-using IntervalType = DeterminedInterval<TimeType>;
+using IntervalType = aia::DeterminedInterval<TimeType>;
+using aia::Relations;
 TestHelper<TimeType> helper;
 
 
