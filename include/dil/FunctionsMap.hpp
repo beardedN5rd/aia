@@ -11,10 +11,10 @@ Copyright (c) 2018-2018: Hagen Pache
 #include <utility>
 
 
-#include <aia/Functions.hpp>
-#include <aia/Relations.hpp>
+#include <dil/Functions.hpp>
+#include <dil/Relations.hpp>
 
-namespace aia {
+namespace dil {
 
     template <typename T>
     using relation_func_t = std::function<bool( const DeterminedInterval<T>& lhs, 

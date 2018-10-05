@@ -9,7 +9,7 @@ Copyright (c) 2018-2018: Hagen Pache
 #include <iostream>
 #include <string>
 
-namespace aia {
+namespace dil {
 
 enum class Relations {
   precedes,

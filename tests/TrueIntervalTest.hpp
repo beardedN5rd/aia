@@ -13,8 +13,8 @@ Copyright (c) 2018-2018: Hagen Pache
 BOOST_AUTO_TEST_SUITE( TrueIntervalTest )
 
 using TimeType = std::uint_fast32_t;
-using IntervalType = aia::DeterminedInterval<TimeType>;
-using aia::Relations;
+using IntervalType = dil::DeterminedInterval<TimeType>;
+using dil::Relations;
 TestHelper<TimeType> helper;
 
 

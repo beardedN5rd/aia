@@ -9,7 +9,7 @@ Copyright (c) 2018-2018: Hagen Pache
 #include <iostream>
 #include <stdexcept>
 
-namespace aia {
+namespace dil {
 
 /* 
 An determined interval can be used to reason about temporal intervals.

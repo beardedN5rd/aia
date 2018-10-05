@@ -3,7 +3,7 @@ using testing ;
 
 lib boost_unit_test_framework ;
 
-project AIA
+project DIL
 	:
 		requirements
 		<variant>release

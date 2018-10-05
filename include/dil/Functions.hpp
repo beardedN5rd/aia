@@ -8,9 +8,9 @@ Copyright (c) 2018-2018: Hagen Pache
 #pragma once
 #include <functional>
 
-#include <aia/DeterminedInterval.hpp>
+#include <dil/DeterminedInterval.hpp>
 
-namespace aia {
+namespace dil {
 
 template <typename T>
 inline bool precedes(const DeterminedInterval<T>& lhs, const DeterminedInterval<T>& rhs)

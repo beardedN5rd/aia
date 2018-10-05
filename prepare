@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -f Dockerfile -t aia/test:latest .
+docker build -f Dockerfile -t dil/test:latest .

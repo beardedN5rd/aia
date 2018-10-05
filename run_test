@@ -2,5 +2,5 @@
 
 docker run -it\
            -u ${UID}\
-           -v `pwd`:/aia/\
-           -w /aia/  aia/test:latest bjam
+           -v `pwd`:/dil/\
+           -w /dil/  dil/test:latest bjam
