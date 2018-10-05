@@ -13,7 +13,7 @@ Copyright (c) 2018-2018: Hagen Pache
 int main()
 {
     dil::FunctionsMap<uint_fast32_t> myMap;
-    dil::DeterminedInterval<uint_fast32_t> foo(7,19);
+    dil::Interval<uint_fast32_t> foo(7,19);
     std::cout << "using myMap=" << myMap.is_valid(dil::Relations::equals,foo,foo) << std::endl;
 
 

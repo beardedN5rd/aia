@@ -9,17 +9,17 @@ Copyright (c) 2018-2018: Hagen Pache
 
 #include <boost/test/unit_test.hpp>
 
-#include <dil/FunctionsMap.hpp>
-
+#include <dil/ii/FunctionsMap.hpp>
+using namespace dil;
 
 
 template <typename T>
-class TestHelper : public dil::FunctionsMap<T>
+class TestHelper : public ii::FunctionsMap<T>
 {     
      public:
-     void test_exactly_relation(    const dil::Relations& relation_in,
-                                    const dil::DeterminedInterval<T>& lhs, 
-                                    const dil::DeterminedInterval<T>& rhs)
+     void test_exactly_relation(    const ii::Relations& relation_in,
+                                    const Interval<T>& lhs, 
+                                    const Interval<T>& rhs)
      {
         for( auto const& [rel, fun] : this->_function_map )
         {

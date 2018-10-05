@@ -1,9 +1,13 @@
 # determined interval logic
 This C++ library is based on ideas mentioned in [Allen's interval algebra](https://en.wikipedia.org/wiki/Allen's_interval_algebra), see the [original paper](http://cse.unl.edu/~choueiry/Documents/Allen-CACM1983.pdf).
 
-In contrast to Allen's intention to work on fuzzy intervals, this library supports determined temporal intervals described by their endpoints.
+In contrast to Allen's intention to work on fuzzy intervals, this library supports determined temporal intervals described by their endpoints. 
 Furthermore it allows points in time.
 
+## Intervals
+Intervals are defined as closed intervals here.
+
+## Intervals vs. points
 
 ## Usage
 It is header only library.

@@ -11,14 +11,15 @@ Copyright (c) 2018-2018: Hagen Pache
 #include <utility>
 
 
-#include <dil/Functions.hpp>
-#include <dil/Relations.hpp>
+#include <dil/ii/Functions.hpp>
+#include <dil/ii/Relations.hpp>
 
 namespace dil {
+namespace ii {
 
     template <typename T>
-    using relation_func_t = std::function<bool( const DeterminedInterval<T>& lhs, 
-                                                const DeterminedInterval<T>& rhs)>;
+    using relation_func_t = std::function<bool( const Interval<T>& lhs, 
+                                                const Interval<T>& rhs)>;
     template <typename T>
     using function_map_t = std::unordered_map<Relations, relation_func_t<T>>;
 
@@ -56,10 +57,12 @@ namespace dil {
             {}
 
             bool is_valid(  const Relations& rel,
-                            const DeterminedInterval<T>& lhs, 
-                            const DeterminedInterval<T>& rhs)
+                            const Interval<T>& lhs, 
+                            const Interval<T>& rhs)
             {
                 return _function_map.at(rel)(lhs,rhs);
             }
     };
+
+}
 }

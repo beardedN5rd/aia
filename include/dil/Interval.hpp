@@ -16,31 +16,17 @@ An determined interval can be used to reason about temporal intervals.
 
 Intervals are always closed intervals here.
 */
-template <typename PointInTimeType> class DeterminedInterval
+template <typename PointInTimeType> class Interval
 {
   public:
-    static void is_true_interval(const PointInTimeType & lwb, const PointInTimeType & upb)
-    {
-      if ( lwb >= upb )
-        throw std::invalid_argument( "Boundaries are not strictly monotonous increasing." );
-    }
-
-    /*
-    Constructs an empty interval aka a point.
-    */
-    explicit DeterminedInterval(const PointInTimeType & val)
-    : _lwb(val)
-    , _upb(val)
-    {}
-
-    explicit DeterminedInterval(const PointInTimeType & lwb, const PointInTimeType & upb)
+    explicit Interval(const PointInTimeType & lwb, const PointInTimeType & upb)
     : _lwb(lwb)
     , _upb(upb)
     {
       is_true_interval(lwb, upb);
     }
 
-    virtual ~DeterminedInterval()
+    virtual ~Interval()
     {}
 
     PointInTimeType lower() const
@@ -52,10 +38,16 @@ template <typename PointInTimeType> class DeterminedInterval
   private:
     PointInTimeType _lwb;
     PointInTimeType _upb;
+
+    static void is_true_interval(const PointInTimeType & lwb, const PointInTimeType & upb)
+    {
+      if ( lwb >= upb )
+        throw std::invalid_argument( "Boundaries are not strictly monotonous increasing." );
+    }    
 };
 
 template <typename PointInTimeType>
-std::ostream& operator<<(std::ostream& os, const DeterminedInterval<PointInTimeType>& interval)  
+std::ostream& operator<<(std::ostream& os, const Interval<PointInTimeType>& interval)  
 {  
     os << '[' << interval.lower() << ',' << interval.upper() << ']';  
     return os;  

@@ -10,6 +10,8 @@ Copyright (c) 2018-2018: Hagen Pache
 #include <string>
 
 namespace dil {
+namespace ii{
+
 
 enum class Relations {
   precedes,
@@ -61,5 +63,7 @@ std::ostream& operator<<(std::ostream& os, const Relations& relation)
 
     os << name_map.at(relation);
     return os;
+}
+
 }
 }
