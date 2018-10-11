@@ -7,7 +7,6 @@ Copyright (c) 2018-2018: Hagen Pache
 +-----------------------------------------------------------------------------*/
 #pragma once
 #include <functional>
-#include <unordered_map>
 #include <utility>
 
 

@@ -11,11 +11,7 @@ Copyright (c) 2018-2018: Hagen Pache
 
 namespace dil {
 
-/* 
-An determined interval can be used to reason about temporal intervals.
 
-Intervals are always closed intervals here.
-*/
 template <typename PointInTimeType> class Interval
 {
   public:

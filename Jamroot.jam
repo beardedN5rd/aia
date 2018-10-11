@@ -13,7 +13,7 @@ project DIL
 
 unit-test Test
 	:
-		[ glob tests/DeterminedTest.cpp ]
+		[ glob tests/Test.cpp ]
 		boost_unit_test_framework
 	:
 		<include>tests

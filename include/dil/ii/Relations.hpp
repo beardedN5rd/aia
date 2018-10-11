@@ -8,6 +8,7 @@ Copyright (c) 2018-2018: Hagen Pache
 #pragma once
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 namespace dil {
 namespace ii{

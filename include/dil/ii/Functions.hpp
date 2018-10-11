@@ -6,8 +6,6 @@ Copyright (c) 2018-2018: Hagen Pache
            http://www.boost.org/LICENSE_1_0.txt)
 +-----------------------------------------------------------------------------*/
 #pragma once
-#include <functional>
-
 #include <dil/Interval.hpp>
 
 namespace dil {
